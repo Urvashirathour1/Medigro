@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocermed - Grocery & Medicine Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MEDIGRO</div>
+        <nav>
+            <ul>
+                <li><a href="#groceries">Groceries</a></li>
+                <li><a href="#medicines">Medicines</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for groceries and medicines">
+        </div>
+        <div class="cart" onclick="openCart()" style="cursor:pointer; position:relative; color:white;">
+  🛒 Cart <span id="cart-count" style="
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    min-width: 20px;
+    text-align: center;
+  ">0</span>
+</div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>FLAT 25% OFF</h2>
+            <p>ON FIRST ORDER</p>
+            <p>USE CODE: FIRST25</p>
+        </div>
+    </section>
+
+    <section class="products" id="groceries">
+        <h2>Groceries For Everyday Needs</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="tomato.png" alt="Tomatoes">
+                <p><strong>Fresh Organic Tomatoes (1kg)</strong></p>
+                <p>Farm Fresh</p>
+                <p>Rs 60</p>
+                <button onclick="addToCart('tomato', 'Fresh Organic Tomatoes', '(1kg)', 60)">Add to Cart</button>
+                
+                
+</div>
+            <div class="product-card">
+                <img src="MILK.png" alt="Milk">
+                <p><strong>Amul Full Cream Milk (1L)</strong></p>
+                <p>Amul</p>
+                <p>Rs 70</p>
+                <button onclick="addToCart('milk', 'Amul Full Cream Milk', '(1L)', 70)">Add to Cart</button>
+                
+            </div>
+            <div class="product-card">
+                <img src="aata.jpg" alt="Atta">
+                <p><strong>Patanjali Whole Wheat Atta (5kg)</strong></p>
+                <p>Patanjali</p>
+                <p>Rs 230</p>
+                <button onclick="addToCart('atta', 'Patanjali Whole Wheat Atta', '(5kg)', 230)">Add to Cart</button>
+                 </div>
+            <div class="product-card">
+                <img src="OIL.png" alt="Sunflower Oil">
+                <p><strong>Fortune Sunflower Oil (1L)</strong></p>
+                <p>Fortune</p>
+                <p>Rs 135</p>
+                <button onclick="addToCart('oil', 'Fortune Sunflower Oil', '(1L)', 135)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="salt.webp" alt="Salt">
+                <p><strong>Tata Salt (1kg)</strong></p>
+                <p>Tata</p>
+                <p>Rs 25</p>
+                <button onclick="addToCart('salt', 'Tata Salt', '(1kg)', 25)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+<section class="products" id="medicines">
+        <h2>Essential Medicines & Health Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="paracetamol.webp" alt="Paracetamol">
+                <p><strong>Paracetamol 500mg (Strip of 10)</strong></p>
+                <p>Cipla</p>
+                <p>Rs 18</p>
+                <button onclick="addToCart('paracetamol', 'Paracetamol 500mg', '(10 tablets)', 18)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="revital.webp" alt="Revital H">
+                <p><strong>Revital H Capsules (Pack of 30)</strong></p>
+                <p>Sun Pharma</p>
+                <p>Rs 285</p>
+            <button onclick="addToCart('revital', 'Revital H Capsules', '(30 pack)', 285)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="dettol.webp" alt="Dettol">
+                <p><strong>Dettol Antiseptic Liquid (500ml)</strong></p>
+                <p>Dettol</p>
+                <p>Rs 99</p>
+                <button onclick="addToCart('dettol','Dettol Antiseptic Liquid','(500ml)',99)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="dabur.webp" alt="Chyawanprash">
+                <p><strong>Dabur Chyawanprash (1kg)</strong></p>
+                <p>Dabur</p>
+                <p>Rs 350</p>
+                <button onclick="addToCart('chyawanprash', 'Dabur Chyawanprash', '(1kg)', 350)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="nasal.webp" alt="Nasal Spray">
+                <p><strong>Otrivin Nasal Spray (10ml)</strong></p>
+                <p>GSK</p>
+                <p>Rs 85</p>
+                <button onclick="addToCart('nasal', 'Otrivin Nasal Spray', '(10ml)', 85)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-column">
+            <h4>ONLINE STORE</h4>
+            <p>GROCERIES</p>
+            <p>MEDICINES</p>
+        </div>
+        <div class="footer-column">
+            <h4>HELPFUL LINKS</h4>
+            <p>HOME</p>
+            <p>ABOUT</p>
+            <p>CONTACT</p>
+        </div>
+        <div class="footer-column">
+            <h4>PARTNERS</h4>
+            <p>HIMALAYA</p>
+            <p>DABUR</p>
+            <p>AMUL</p>
+            <p>CIPLA</p>
+        </div>
+        <div class="footer-column">
+            <h4>ADDRESS</h4>
+            <p>BUILDING 101</p>
+            <p>CENTRAL AVENUE</p>
+            <p>LA - 902722</p>
+            <p>UNITED STATES</p>
+        </div>
+    </footer>
+        <!-- Cart Modal -->
+<div id="cart-modal" style="display:none; position:fixed; top:10%; left:50%; transform:translateX(-50%);
+ background:white; border:2px solid #ccc; padding:20px; z-index:1000; width:300px; box-shadow:0 0 10px #aaa;">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <p><strong>Total: Rs <span id="cart-total">0</span></strong></p>
+    <button onclick="placeOrder()">Place Order</button>
+    <button onclick="closeCart()">Close</button>
+</div>
+
+<!-- Order Confirmation -->
+<div id="order-confirmation" style="display:none; text-align:center; margin-top:20px; font-size:18px; color:green;">
+    ✅ Order Placed Successfully!
+</div>
+<script>
+let cart = {};
+function addToCart(id, name, unit, price) {
+    if (!cart[id]) {
+        cart[id] = { name, unit, price, quantity: 1 };
+    } else {
+        cart[id].quantity += 1;
+    }
+    updateCartCount();
+    updateCartPreview();
+}
+
+function updateCartPreview() {
+    const cartList = document.getElementById("cart-list");
+    cartList.innerHTML = '';
+
+    for (const id in cart) {
+        const item = cart[id];
+        const line = document.createElement('p');
+        line.textContent = '${item.name} ${item.unit} × ${item.quantity} = Rs ${item.quantity * item.price}';
+        cartList.appendChild(line);
+    }
+
+    if (Object.keys(cart).length === 0) {
+        cartList.innerHTML = '<p>Your cart is empty.</p>';
+    }
+}''
+function updateCartCount() {
+    let count = 0;
+    for (const id in cart) {
+        count += cart[id].quantity;
+    }
+    document.getElementById("cart-count").innerText = count;
+}
+function openCart() {
+    if (Object.keys(cart).length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    const cartItemsContainer = document.getElementById("cart-items");
+    cartItemsContainer.innerHTML = '';
+    let total = 0;
+
+    for (const id in cart) {
+        const item = cart[id];
+        total += item.quantity * item.price;
+
+        const line = document.createElement('p');
+        // Use backticks ` for template string
+        line.textContent = '${item.name} ${item.unit} × ${item.quantity} = Rs ${item.quantity * item.price}';
+        cartItemsContainer.appendChild(line);
+    }
+
+    document.getElementById("cart-total").innerText = total;
+    document.getElementById("cart-modal").style.display = "block";
+    document.getElementById("order-confirmation").style.display = "none";
+}
+
+
+    updateCartCount(); // In case you want to refresh the badge count visually
+
+
+    document.getElementById("cart-items").innerHTML = '';
+    let total = 0;
+
+    for (const id in cart) {
+        const item = cart[id];
+        total += item.quantity * item.price;
+
+        const line = document.createElement('p');
+    
+        line.textContent = '${item.name} ${item.unit} × ${item.quantity} = Rs ${item.quantity * item.price}';
+        document.getElementById("cart-items").appendChild(line);
+    }
+
+    document.getElementById("cart-total").innerText = total;
+    document.getElementById("cart-modal").style.display = "block";
+    document.getElementById("order-confirmation").style.display = "none";
+
+
+function closeCart() {
+    document.getElementById("cart-modal").style.display = "none";
+}
+
+function placeOrder() {
+    cart = {};
+    updateCartCount();
+    updateCartPreview();
+    document.getElementById("cart-modal").style.display = "none";
+    document.getElementById("order-confirmation").style.display = "block";
+}
+</script>
+<section id="cart-preview" style="padding: 20px; border-top: 2px solid #ccc;">
+    <h2>Your Cart Preview</h2>
+    <div id="cart-list"></div>
+</section>
+    
+</body>
+</html>
